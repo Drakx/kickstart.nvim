@@ -183,6 +183,7 @@ require('lazy').setup({
   --       Uncomment any of the lines below to enable them.
   { import = 'kickstart.plugins.autoformat' },
   { import = 'kickstart.plugins.debug' },
+  { import = 'kickstart.plugins.golang' },
 
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
@@ -302,7 +303,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'bash', 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'vimdoc', 'vim' },
+  ensure_installed = { 'json', 'yaml', 'bash', 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'vimdoc', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -429,6 +430,8 @@ local servers = {
   bashls = {
     filetypes = { 'sh', 'zsh' },
   },
+  yamlls = {},
+  jsonls = {},
   -- tsserver = {},
 
   lua_ls = {
