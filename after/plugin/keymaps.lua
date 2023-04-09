@@ -29,4 +29,4 @@ keymap("n", "M-l", ":vertical resize +2<CR>", opts)
 
 -- highlighted text can be moved
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-1<CR>gv=gv", opts)
+keymap("v", "K", ":m '.-2<CR>gv=gv", opts)
