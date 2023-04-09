@@ -1,5 +1,9 @@
 local opts = { noremap = true, silent = true }
 --
+
+-- leader key
+-- vim.g.mapleader = ','
+
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 -- vim.keymap.set('n', '<leader>ed', vim.diagnostic.open_float, { silent = true, desc = "Open floating diagnostic message" })
@@ -31,4 +35,3 @@ keymap("n", "M-l", ":vertical resize +2<CR>", opts)
 -- highlighted text can be moved
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-1<CR>gv=gv", opts)
-
