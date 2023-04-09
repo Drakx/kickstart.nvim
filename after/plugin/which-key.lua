@@ -56,7 +56,7 @@ local setup = {
 		align = "left",                                                        -- align columns left, center or right
 	},
 	ignore_missing = true,                                                     -- enable this to hide mappings for which you didn't specify a label
-	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+	hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
 	show_help = true,                                                          -- show help message on the command line when the popup is visible
 	triggers = "auto",                                                         -- automatically setup triggers
 	-- triggers = {"<leader>"} -- or specify a list manually
@@ -84,7 +84,7 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"[B]uffers",
 	},
-	["c"] = { "<cmd>bdelete!<CR>", "[C]lose Buffer" },
+	["c"] = { "<cmd>bdelete!<cr>", "[C]lose Buffer" },
 	["d"] = {
 		name = "Debug",
 		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "[D]ebug [B]reakpoint" },
@@ -108,7 +108,7 @@ local mappings = {
 	-- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["g"] = {
 		name = "Git",
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -140,31 +140,31 @@ local mappings = {
 		-- f = { require('vim.lsp.buf').format(), "Format" },
 		g = {
 			name = "Go",
-			a = { "<cmd>GoAlt<CR>", "alternate impl and test" },
-			b = { "<cmd>GoBuild<CR>", "go build" },
+			a = { "<cmd>GoAlt<cr>", "alternate impl and test" },
+			b = { "<cmd>GoBuild<cr>", "go build" },
 			c = {
 				name = "Coverage",
-				c = { "<cmd>GoCoverage<CR>", "annotate with coverage" },
-				t = { "<cmd>GoCoverageToggle<CR>", "toggle coverage display" },
-				C = { "<cmd>GoCoverageClear<CR>", "clear coverage" },
-				b = { "<cmd>GoCoverageBrowser<CR>", "open coverage in a browser" },
+				c = { "<cmd>GoCoverage<cr>", "annotate with coverage" },
+				t = { "<cmd>GoCoverageToggle<cr>", "toggle coverage display" },
+				C = { "<cmd>GoCoverageClear<cr>", "clear coverage" },
+				b = { "<cmd>GoCoverageBrowser<cr>", "open coverage in a browser" },
 			},
-			d = { "<cmd>GoDoc<CR>", "go doc" },
-			-- e = { "<cmd>GoCheat<CR>", "go cheat with search topic" },
-			-- i = { "<cmd>GoInstallDeps<CR>", "Install Go deps" },
+			d = { "<cmd>GoDoc<cr>", "go doc" },
+			-- e = { "<cmd>GoCheat<cr>", "go cheat with search topic" },
+			-- i = { "<cmd>GoInstallDeps<cr>", "Install Go deps" },
 			i = { require('gopher.api').install_deps, "Install Go deps" },
 			m = {
 				name = "Module",
 				-- i = { require('gopher.api').mod('init'), "Go Mod Init" },
 				-- t = { require('gopher.api').mod('tidy'), "Go Mod Tidy" },
 			},
-			r = { "<cmd>GoRun<CR>", "go run" },
+			r = { "<cmd>GoRun<cr>", "go run" },
 			t = {
 				name = "Test",
-				a = { "<cmd>GoTest ./...<CR>", "go test ./..." },
-				s = { "<cmd>GoTestFunc<CR>", "go test -s [current test]" },
+				a = { "<cmd>GoTest ./...<cr>", "go test ./..." },
+				s = { "<cmd>GoTestFunc<cr>", "go test -s [current test]" },
 				d = {
-					"<cmd>call vimspector#LaunchWithSettings( #{ configuration: 'single test', TestName: go#util#TestName() } )<CR>",
+					"<cmd>call vimspector#LaunchWithSettings( #{ configuration: 'single test', TestName: go#util#TestName() } )<cr>",
 					"Debug current test",
 				},
 			},
@@ -172,7 +172,7 @@ local mappings = {
 		i = { "<cmd>LspInfo<cr>", "[I]nfo" },
 		I = { "<cmd>LspInstallInfo<cr>", "[I]nstaller Info" },
 		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+			"<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
 			"[N]ext Diagnostic",
 		},
 		k = {
@@ -217,8 +217,8 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
-	["w"] = { "<cmd>w!<CR>", "[W]rite" },
-	["q"] = { "<cmd>q!<CR>", "[Q]uit" },
+	["w"] = { "<cmd>w!<cr>", "[W]rite" },
+	["q"] = { "<cmd>q!<cr>", "[Q]uit" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "[P]rojects" },
 	["L"] = {
 		name = 'Lazy',
