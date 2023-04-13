@@ -151,8 +151,8 @@ local mappings = {
 			},
 			d = { "<cmd>GoDoc<cr>", "go doc" },
 			-- e = { "<cmd>GoCheat<cr>", "go cheat with search topic" },
-			-- i = { "<cmd>GoInstallDeps<cr>", "Install Go deps" },
-			i = { require('gopher.api').install_deps, "Install Go deps" },
+			i = { "<cmd>GoInstallDeps<cr>", "Install Go deps" },
+			-- i = { require('gopher.api').install_deps, "Install Go deps" },
 			m = {
 				name = "Module",
 				-- i = { require('gopher.api').mod('init'), "Go Mod Init" },

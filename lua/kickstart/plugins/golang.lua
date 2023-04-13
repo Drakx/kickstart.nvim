@@ -1,10 +1,13 @@
 --local icons = require("icons")
 return {
   "olexsmir/gopher.nvim",
+  "leoluz/nvim-dap-go",
   version = "*",
   dependencies = {
+    "ray-x/guihua.lua",
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "theHamsta/nvim-dap-virtual-text",
   },
   config = function()
     local icons = require('after.plugin.icons')
