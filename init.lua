@@ -84,7 +84,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',       opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -191,15 +191,18 @@ require('lazy').setup({
   --
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
-  { import = 'custom.plugins' },
-  -- { import = 'custom.plugins.autopairs' },
-  -- { import = 'custom.plugins.undotree' },
-  -- { import = 'custom.plugins.bufferline' },
+
+  -- { import = 'custom.plugins.init' },
+  { import = 'custom.plugins.autopairs' },
+  { import = 'custom.plugins.undotree' },
+  { import = 'custom.plugins.bufferline' },
   -- { import = 'custom.plugins.golang' },
-  -- { import = 'custom.plugins.lualine' },
-  -- { import = 'custom.plugins.mkdir' },
-  -- { import = 'custom.plugins.neotree' },
-  -- { import = 'custom.plugins.projects' },
+  { import = 'custom.plugins.lualine' },
+  { import = 'custom.plugins.mkdir' },
+  { import = 'custom.plugins.neotree' },
+  { import = 'custom.plugins.projects' },
+  { import = 'custom.plugins.toggleterm' },
+  { import = 'custom.plugins.undotree' },
 }, {})
 
 -- [[ Setting options ]]
