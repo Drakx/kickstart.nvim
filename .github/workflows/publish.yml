@@ -1,0 +1,29 @@
+name: Push to docker/livm repo
+
+on:
+  push:
+    branches: [ custom ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Creates output folder and removes .git
+        run: |
+             mkdir output
+             cp -R * output
+             rm -rf output/.git
+
+      - name:  Pushes to public repo
+      - uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: 'output'
+          destination-github-username: 'drakx'
+          destination-repository-name: 'docker/lvim'
+          user-email: kaiwindle@gmail.com
+          commit-message: pushed from $GITHUB_REF
+          target-branch: master
+          target-directory: 'config'
