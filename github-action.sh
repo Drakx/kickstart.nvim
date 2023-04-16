@@ -1,4 +1,5 @@
 #!/bin/sh
-mkdir tmp
-cp -R * tmp/
-rm -rf tmp/.git tmp/.github
+OUTPUTDIR=output
+mkdir $OUTPUTDIR
+cp -R * $OUTPUTDIR/
+rm -rf $OUTPUTDIR/.git $OUTPUTDIR/.github
