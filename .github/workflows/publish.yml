@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        name: Creates output folder and removes .git
-        # run: |
-        #   mkdir output
-        #   cp -R ./* output
+      - name: Creates output folder and removes .git
+        run: |
+          mkdir output
+          cp -R ./* output
         #   rm -rf output/.git
 
       - name: Pushes to public repository
@@ -21,9 +21,10 @@ jobs:
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
+          source-directory: output/
           destination-github-username: "drakx"
           destination-repository-name: "docker-lvim"
           user-email: kaiwindle@gmail.com
-          commit-message: pushed from $GITHUB_REF
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: master
           target-directory: "config/nvim"
