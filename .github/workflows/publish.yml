@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Creates output folder and removes .git
-        run: |
-          mkdir output
-          cp -R ./* output
-          rm -rf output/.git
+        name: Creates output folder and removes .git
+        # run: |
+        #   mkdir output
+        #   cp -R ./* output
+        #   rm -rf output/.git
 
       - name: Pushes to public repository
         id: push_directory
