@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Creates output folder and removes .git
-        run: |
-          mkdir output
+        run: sh ./github-action.sh
+        # run: |
+        #   mkdir output
 
         #   rm -rf output/.git
 
