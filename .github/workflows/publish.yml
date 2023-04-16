@@ -12,7 +12,7 @@ jobs:
       - name: Creates output folder and removes .git
         run: |
           mkdir output
-          cp -R * output
+          cp -R ./* output
           rm -rf output/.git
 
       - name: Pushes to public repository
