@@ -7,4 +7,4 @@
 OUTPUTDIR=output
 mkdir $OUTPUTDIR
 cp -R * $OUTPUTDIR/
-rm -rf $OUTPUTDIR/.git $OUTPUTDIR/.github
+rm -rf $OUTPUTDIR/.git $OUTPUTDIR/.github $OUTPUTDIR/github-action.sh
