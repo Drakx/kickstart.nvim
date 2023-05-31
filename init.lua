@@ -447,6 +447,7 @@ local servers = {
   gopls = {},
   pyright = {},
   rust_analyzer = {},
+  zls = {}
   bashls = {
     filetypes = { 'sh', 'zsh' },
   },
